@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>包裹预报-吉祥邮</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="css/cropper.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- top start -->
+    <div id="header">
+        <div id="tip-info" class="cl">
+            <div class="ins">
+                <h6 class="fl">欢迎来到吉祥邮！！</h6>
+                <span class="fl m-l-15">今日汇率：</span>
+                <div class="u-downselect fl"> <a class="select-val" href="javascript:void(0)" data-select2="down"> <span class="txt arr-b-1">100人民币 = 23.64欧元</span> </a>
+                    <ul class="hide">
+                        <li class="op"><a href="#" class="txt">100人民币 = 23.64欧元</a></li>
+                        <li class="op"><a href="#" class="txt">100人民币 = 21.6英镑</a></li>
+                        <li class="op"><a href="#" class="txt">100人民币 = 24.54美元</a></li>
+                        <li class="op"><a href="#" class="txt">1人民币 = 16.8403日元</a></li>
+                        <li class="op"><a href="#" class="txt">100人民币 = 29.34澳元</a></li>
+                    </ul>
+                </div>
+                <div class="u-downselect fr"> <a class="select-val icon-time" href="javascript:void(0)" data-select2="down"> <span class="txt arr-b-1" id="currentTime">2017年2月5日 上午8:31:24</span> </a> </div>
+            </div>
+        </div>
+        <div id="top">
+            <div class="ins cl">
+                <div id="logo"> <a href="index.html"> <img src="../images/new/weiyi02.png" style="width: 300px;height: 49px" alt="吉祥邮 极致 极速 专注 口碑" title="吉祥邮 极致 极速 专注 口碑"> </a> </div>
+                <div class="toplink" style="display: none;" id="nologin"> <a href="../account/login" class="btn-round btn-login">登陆</a> <a href="userRegister.html" class="btn-round btn-register">注册</a> </div>
+                <div class="toplink u-downselect down-list" style="" id="logined"> <a href="#" target="_blank" class="link-user select-val"><span class="txt arr-b-2">欢迎： nanxinmin@gmail.com</span></a>
+                    <ul class="hide t-c">
+                        <li class="op"><a target="_blank" href="#">会员中心</a> </li>
+                        <li class="op"><a target="_blank" href="#">我的包裹</a></li>
+                        <li class="op"><a target="_blank" href="#">进入后台</a></li>
+                        <li class="op"><a href="#" class="link-logout" onclick="logout();">退出登陆</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="nav">
+            <ul class="menu cl">
+                <li class="list "> <a class="ins1" href="../index.html">首页</a> </li>
+                <li class="list "> <a class="ins1" href="../PACategory/Index">禁运物品</a> </li>
+                <li class="list "> <a class="ins1" href="../CommonProblemDetails/index ">帮助中心</a> </li>
+                <li class="list "> <a class="ins1" href="../strategylist.html">海淘攻略</a> </li>
+                <li class="list "> <a class="ins1" href="../shoppinglist.html">海淘导航</a> </li>
+                <li class="list "> <a class="ins1" href="../AddValueServices/index">增值服务</a> </li>
+                <li class="list "> <a class="ins1" href="../shareorderlist.html">海淘晒单 </a> </li>
+                <li class="list "> <a class="ins1" href="../Calculator/Index">运费试算</a> </li>
+            </ul>
+        </div>
+    </div>
+    <!-- top end -->
+    <!-- content start -->
+    <div class="action-item addorder">
+        <div class="container content">
+            <div class="action-item-title clearfix">
+                <div class="pull-left"> <a href="box-manage.html">我的包裹管理</a> <em>></em> <span><i class="glyphicon glyphicon-edit"></i>包裹预报</span> </div>
+                <div class="pull-right text-right"> <a href="box-batch-soon.html">批量包裹预报></a> </div>
+            </div>
+            <div class="tips">
+                <dl>
+                    <dt><i class="glyphicon glyphicon-volume-up"></i></dt>
+                    <dd>温馨提示】根据中国海关规定“个人邮寄进境物品，包裹预报和申报信息需如实填写。填写收货地址时请上传身份证,以便快速完成清关，申报商品货币单位将以所在仓库为准, 运单物品总数量大于1且价值总额大于1000元的建议分开预报（除合理自用且不可拆分物品），新手预报前需知晓
+                        <a href="#">《禁运物品》</a>对预报有疑问可以参考<a href="#">《新手指南》</a>。</dd>
+                </dl>
+            </div>
+            <form class="form-horizontal">
+            	<div class="main_xuanze">
+            	<div class="form-group form-md-line-input  row">
+                        
+                        <div class="col-xs-3 wp20 p-r">
+                        	<a class="xz xz1" href=""><h3>转运直邮</h3><p>适合国内客户</p></a>
+                        </div>
+                        <div class="col-xs-3 wp20 p-r">
+                        	<a class="xz xz2" href=""><h3>快递直邮</h3><p>国外客户选择</p></a>
+                        </div>
+                        <div class="col-xs-3 wp20 p-r">
+                        	<a class="xz xz3" href=""><h3>仓库发货</h3></a>
+                        </div>
+                        <div class="col-xs-3 wp20 p-r">
+                        	<a class="xz xz4" href=""><h3>境内头程</h3></a>
+                        </div>
+                         <div class="col-xs-3 wp20 p-r">
+                            <a class="xz xz5" href=""><h3>全球速递</h3>
+                                <p class="mt5">
+                                    <span class="btn btn-default  ml0">中文</span>
+                                    <span  class="btn btn-default mr15 ml0">英文</span>
+                                </p>
+                            </a>
+                        </div>
+                </div>
+                </div>
+            	
+                <div class="ck_xuanze">
+                    <div class="tips-title">
+                        <h3 class="f20 bold">选择仓库<i class="glyphicon glyphicon-exclamation-sign color-green"></i></h3>
+                    </div>
+                    <div class="form-group form-md-line-input  row">
+                        
+                        <div class="col-xs-12 p-r">
+                        	<div class="col-xs-8 p-r pl0">
+                        		<ul class="nav nav-tabs nav-tabs-lg zf-selct ">
+                                             <li class="active">
+                                                <a href="" data-toggle="tab" class="btn  mr20 min-large" aria-expanded="true"><img src="images/jp.png">日本琦玉仓库 </a>
+                                             </li>
+                                             <li class="">
+                                                <a href="" data-toggle="tab" class="btn  mr20 min-large" aria-expanded="false"><img src="images/usa.png">洛杉矶CA仓库</a>
+                                             </li>
+                                             <li class="">
+                                                <a href="" data-toggle="tab" class="btn  mr20 min-large" aria-expanded="false"><img src="images/ge.png">德国黑森仓库</a>
+                                             </li>
+                                             <li class="">
+                                                <a href="" data-toggle="tab" class="btn  mr20 min-large" aria-expanded="false"><img src="images/as.png">澳洲仓库</a>
+                                             </li>
+                                             <li class="">
+                                                <a href="" data-toggle="tab" class="btn  mr20 min-large" aria-expanded="false"><img src="images/uk.png">英国仓库</a>
+                                             </li>
+                                </ul>
+                        	</div>
+                        	<label class="col-xs-1 control-label f16 t-l star-red">更多仓库</label>
+                            <div class="col-xs-3 p-r">
+	                            <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35 " placeholder="" data-toggle="dropdown">
+	                            <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+	                                <li><a href="javascript:void(0);"><img src="images/usa.png">美国洛杉矶CA仓库2760</a></li>
+	                                <li><a href="javascript:void(0);"><img src="images/usa.png">美国OR仓库97217</a></li>
+	                                <li><a href="javascript:void(0);"><img src="images/jp.png">日本琦玉仓库0043</a></li>
+	                                <li><a href="javascript:void(0);"><img src="images/ge.png">德国黑森仓库60386</a></li>
+	                                <li><a href="javascript:void(0);"><img src="images/as.png">澳洲仓库3125</a></li>
+	                                <li><a href="javascript:void(0);"><img src="images/uk.png">英国仓库B5 6SN</a></li>
+	                                <li><a href="javascript:void(0);"><img src="images/kr.png">韩国仓库B5 6SN</a></li>
+	                                <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+	                            </ul>
+	                            <em class="error-input">仓库不能为空！</em>
+                            </div>
+                             <!--<span class="caret caret-absolute green"></span>-->
+                            <!-- 展开添加green 变绿色 -->
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix sj-xinxi">
+                	<div class="col-xs-6 pl25">
+                        <div class="tips-title clearfix">
+                            <h3 class="f20 bold col-xs-3">收件人信息</h3>
+                            <div class="col-xs-5  p-r mt10">
+                                <input type="text" class="form-control b0 f16 b0-bm-focus" placeholder="Google地址自动填充" data-toggle="dropdown" aria-expanded="false" autocomplete="off">
+                                <ul class="dropdown-menu mt0 pull-right wp100" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 p-r plr0 t-r">
+                                <a href="javascript;" class="f14 c-34" data-toggle="dropdown" aria-expanded="false">从地址库选择信息</a>
+                                <ul class="dropdown-menu mt0 pull-right wp100" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <span class="caret"></span>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input p-r row">
+                            <label class="col-xs-2 control-label f16 t-l">国家</label>
+                            <div class="col-xs-10 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input  row">
+                            <label class="col-xs-2 control-label f16 t-l star-red">姓名</label>
+                            <div class="col-xs-4 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <em class="error-input">姓名不能为空！</em>
+                            </div>
+                            <label class="col-xs-2 control-label f16 t-l">公司</label>
+                            <div class="col-xs-4 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input  row">
+                            <label class="col-xs-2 control-label f16 t-l star-red pr0">详细地址1</label>
+                            <div class="col-xs-10 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input  row">
+                            <label class="col-xs-2 control-label f16 t-l star-red pr0">详细地址2</label>
+                            <div class="col-xs-10 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input  row">
+                            <label class="col-xs-2 control-label f16 t-l star-red">城市</label>
+                            <div class="col-xs-4 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                            <label class="col-xs-2 control-label f16 t-l">所在州</label>
+                            <div class="col-xs-4 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input  row">
+                            <label class="col-xs-2 control-label f16 t-l star-red">邮编</label>
+                            <div class="col-xs-4 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                            <label class="col-xs-2 control-label f16 t-l  star-red">电话</label>
+                            <div class="col-xs-4 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="pull-left f16 ml15">
+                                <input type="checkbox" class="mr5">这是一个住宅地址</label><a href="" class="btn btn-default mr15 pull-right">保存到产品库</a></div>
+                    </div>
+                
+                    <div class="col-xs-6 pr25">
+                        <div class="tips-title clearfix">
+                            <h3 class="f20 bold col-xs-3">发件人信息</h3>
+                            <div class="col-xs-5  p-r mt10">
+                                <input type="text" class="form-control b0 f16 b0-bm-focus" placeholder="Google地址自动填充" data-toggle="dropdown" aria-expanded="false" autocomplete="off">
+                                <ul class="dropdown-menu mt0 pull-right wp100" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 p-r plr0 t-r">
+                                <a href="javascript;" class="f14 c-34" data-toggle="dropdown" aria-expanded="false">从地址库选择信息</a>
+                                <ul class="dropdown-menu mt0 pull-right wp100" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <span class="caret"></span>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input p-r row">
+                            <label class="col-xs-2 control-label f16 t-l">国家</label>
+                            <div class="col-xs-10 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input  row">
+                            <label class="col-xs-2 control-label f16 t-l star-red">姓名</label>
+                            <div class="col-xs-4 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <em class="error-input">姓名不能为空！</em>
+                            </div>
+                            <label class="col-xs-2 control-label f16 t-l">公司</label>
+                            <div class="col-xs-4 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input  row">
+                            <label class="col-xs-2 control-label f16 t-l star-red pr0">详细地址1</label>
+                            <div class="col-xs-10 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input  row">
+                            <label class="col-xs-2 control-label f16 t-l star-red pr0">详细地址2</label>
+                            <div class="col-xs-10 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input  row">
+                            <label class="col-xs-2 control-label f16 t-l star-red">城市</label>
+                            <div class="col-xs-4 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                            <label class="col-xs-2 control-label f16 t-l">所在州</label>
+                            <div class="col-xs-4 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                               <!-- <span class="caret caret-absolute"></span>-->
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input  row">
+                            <label class="col-xs-2 control-label f16 t-l star-red">邮编</label>
+                            <div class="col-xs-4 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                            <label class="col-xs-2 control-label f16 t-l  star-red">电话</label>
+                            <div class="col-xs-4 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix t-r"><a href="" class="btn btn-default mr15">保存到产品库</a></div>
+                    </div>
+                    </div>
+                <div class="baoguo-xinxi">
+                    <div class="tips-title">
+                        <h3 class="f20 bold">包裹信息<i class="glyphicon glyphicon-exclamation-sign color-green"></i></h3>
+                    </div>
+                    <div class="form-group form-md-line-input  row">
+                        <label class="col-xs-1 control-label f16 t-l star-red">包裹个数</label>
+                        <div class="col-xs-2 p-r">
+                            <input type="text" class="form-control f16 h-lh35" placeholder="" data-toggle="dropdown" value="2">
+                            <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                <li><a href="javascript:void(0);">1</a></li>
+                                <li><a href="javascript:void(0);">2</a></li>
+                                <li><a href="javascript:void(0);">3</a></li>
+                                <li><a href="javascript:void(0);">4</a></li>
+                                <li><a href="javascript:void(0);">5</a></li>
+                            </ul>
+                            <span class="caret caret-absolute r25 "></span>
+                            <!-- 展开添加green 变绿色 -->
+                        </div>
+                        <label class="col-xs-2 wp12 f16 mt5">
+                            <input type="checkbox" class="mr5">尺寸相同？</label>
+                        <label class="col-xs-2 wp12 f16 mt5">
+                            <input type="checkbox" class="mr5">送货上门？</label>
+                        <label class="col-xs-2 wp12 f16 mt5" id="haiguan-all">
+                            <input type="checkbox" class="mr5" >海关信息</label>
+                    </div>
+                    <div class="baoguo-ziliao bm-dot-8b-2 mb20 pm20">
+                        <div class="form-group form-md-line-input clearfix p-r  row">
+                        	<i class="bg-xuhao">1</i>
+                        	<label class="col-xs-1 control-label f16 t-l">预报单号</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                       
+                            </div>
+                            <label class="col-xs-1 control-label f16 t-l">重量</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <span class="caret-absolute f16 c-34 t-5">lbs</span>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input clearfix  row">
+                            <label class="col-xs-1 control-label f16 t-l">长度</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <span class="caret-absolute f16 c-34 t-5">in</span>
+                            </div>
+                            <label class="col-xs-1 control-label f16 t-l">宽度</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <span class="caret-absolute f16 c-34 t-5">in</span>
+                            </div>
+                            <label class="col-xs-1 control-label f16 t-l">高度</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <span class="caret-absolute f16 c-34 t-5">in</span>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input clearfix  row">
+                            <label class="col-xs-1 control-label f16 t-l">保险</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <span class="caret-absolute f16 c-34 t-5">(USD)</span>
+                            </div>
+                            <div class="col-xs-2 p-r mt5"><a href="" class="f16 c-34">了解更多</a></div>
+                        </div>
+                    </div>
+
+                    <div class="baoguo-haiguan bm-dot-8b-2 mb20 pm20">
+                       <div class="form-group form-md-line-input clearfix  row">
+                            <label class="col-xs-2 control-label f18 t-l f-b">海关信息</label>
+                       </div>
+                       <div class="form-group form-md-line-input clearfix  row">
+                            
+                            <label class="col-xs-1 control-label f16 t-l star-red">购买链接</label>
+                            <div class="col-xs-7 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                              
+                            </div>
+                        </div>
+                        
+                       <div class="form-group form-md-line-input clearfix  row">
+                            <label class="col-xs-1 control-label f16 t-l star-red">物品名称</label>
+                            <div class="col-xs-4 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                              
+                            </div>
+                            <label class="col-xs-1 control-label f16 t-l star-red">物品分类</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                              
+                            </div>
+                            
+                        </div>
+                        <div class="form-group form-md-line-input clearfix  row">
+                            <label class="col-xs-1 control-label f16 t-l star-red">价格单位</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                               <em class="error-input">海关价格单位填写不正确！</em>
+                            </div>
+                            <label class="col-xs-1 control-label f16 t-l star-red">数量</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                               
+                            </div>
+                            <label class="col-xs-1 control-label f16 t-l star-red">单位重量</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <span class="caret-absolute f16 c-34 t-5">(lbs)</span>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input clearfix  row">
+                            <label class="col-xs-1 control-label f16 t-l star-red">原产地</label>
+                            <div class="col-xs-3 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                              
+                            </div>
+                        </div>
+                        <div class="form-group clearfix row">
+                          <div class="col-xs-10">
+                           <a href="" class="btn btn-default pull-left ml0">保存到产品库</a>
+                           <a href="" class="pull-right f16 c-34"><i class="fa fa-trash mr10 "></i>删除</a>
+                          </div>
+                        </div>
+                        <div class="form-group clearfix row">
+                          <div class="col-xs-12">
+                             <a href="" class="btn btn-green pull-left ">继续申报物品</a>
+                             <div class="col-xs-3 p-r">
+                            <input type="text" class="form-control f16 h-lh35  b0 bm-e7 b0-bm-focus" placeholder="选择产品" data-toggle="dropdown" >
+                            <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                <li><a href="javascript:void(0);">1</a></li>
+                                <li><a href="javascript:void(0);">2</a></li>
+                                <li><a href="javascript:void(0);">3</a></li>
+                                <li><a href="javascript:void(0);">4</a></li>
+                                <li><a href="javascript:void(0);">5</a></li>
+                            </ul>
+                            
+                            <!-- 展开添加green 变绿色 -->
+                        </div>
+                            <div class="col-xs-2 p-r pull-right">
+                              <span class="f14">总重量：0Ibs</span>
+                              <em class="error-input t-25">错误信息！</em>
+ 
+                            </div>
+                            <div class="col-xs-2 p-r pull-right">
+                              <span  class="f14">申报总价值：0USD</span>
+                              <em class="error-input t-25">错误信息！</em>
+ 
+                            </div>
+
+
+                          </div>
+                        </div>
+                        <div class="form-group form-md-line-input clearfix  row">
+                            <label class="col-xs-1 control-label f16 t-l">货物用途</label>
+                            <div class="col-xs-3 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                              
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input clearfix  row">
+                        	<div class="col-xs-12">
+                            <div class=" pl15 p-r">
+						        <h3 class="baojia_det mt10 b0"> <a href="#more-hg" data-toggle="collapse" class="fa collapsed f16">更多海关信息</a></h3>
+						    </div>
+                            <div id="more-hg" class="collapse mt10 more-hg">
+							       <ul class="nav nav-tabs">
+										<li class="active">
+											<a href="#EEI" data-toggle="tab" class="f16  pl0">
+												<i></i>
+												 无需填写EEI / SED
+											</a>
+										</li>
+										<li><a href="#ITN" data-toggle="tab" class="f16">
+											<i></i>预报ITN
+											</a>
+										</li>
+									</ul> 
+							        <div class="tab-content">
+										<div class="tab-pane fade in active" id="EEI">
+											<div class="form-group form-md-line-input clearfix  row">
+					                            <label class="col-xs-1 control-label f16 t-l pr0">FTR CODE</label>
+					                            <div class="col-xs-3 p-r">
+					                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+					                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+					                                    <li> <a href="#">1111</a> </li>
+					                                    <li> <a href="#">2222</a> </li>
+					                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+					                                </ul>
+					                              
+					                            </div>
+					                            <label class="col-xs-3 control-label f16 t-l">货物申报价值低于2500$</label>
+                                        </div>
+										</div>
+										<div class="tab-pane fade" id="ITN">
+											<div class="form-group form-md-line-input clearfix  row">
+											    <label class="col-xs-1 control-label f16 t-l pr0">AES</label>
+					                            <div class="col-xs-3 p-r">
+					                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+					                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+					                                    <li> <a href="#">1111</a> </li>
+					                                    <li> <a href="#">2222</a> </li>
+					                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+					                                </ul>
+					                              
+					                            </div>
+					                         </div>
+										</div>
+									</div>
+							        
+							   </div>
+                            </div>
+                        </div>
+                        
+
+
+
+
+
+
+                    </div>
+
+
+
+                    <div class="baoguo-ziliao bm-dot-e7-2 mb20 pm20">
+                        <div class="form-group form-md-line-input clearfix p-r row">
+                        	<i class="bg-xuhao">2</i>
+                        	<label class="col-xs-1 control-label f16 t-l">预报单号</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                       
+                            </div>
+                            <label class="col-xs-1 control-label f16 t-l">重量</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <span class="caret-absolute f16 c-34 t-5">lbs</span>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input clearfix  row">
+                            <label class="col-xs-1 control-label f16 t-l">长度</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <span class="caret-absolute f16 c-34 t-5">in</span>
+                            </div>
+                            <label class="col-xs-1 control-label f16 t-l">宽度</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <span class="caret-absolute f16 c-34 t-5">in</span>
+                            </div>
+                            <label class="col-xs-1 control-label f16 t-l">高度</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <span class="caret-absolute f16 c-34 t-5">in</span>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input clearfix  row">
+                            <label class="col-xs-1 control-label f16 t-l">保险</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li> <a href="#">1111</a> </li>
+                                    <li> <a href="#">2222</a> </li>
+                                    <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                </ul>
+                                <span class="caret-absolute f16 c-34 t-5">(USD)</span>
+                            </div>
+                            <div class="col-xs-2 p-r mt5"><a href="" class="f16 c-34">了解更多</a></div>
+                        </div>
+                    </div>
+                    <!-- 尺寸相同 -->
+                    <div class="baoguo-ziliao">
+                        <div class="form-group form-md-line-input clearfix  row">
+                            <div class="col-xs-12  t-l"><span class="control-label f16">包裹重量：0磅</span><span class="control-label f16 ml20"> 保险总额：0USD</span></div>
+                        </div>
+                        <div class="form-group form-md-line-input  row">
+                            <label class="col-xs-1 control-label f16 t-l star-red">运单尺寸</label>
+                            <div class="col-xs-2 p-r">
+                                <input type="text" class="form-control f16 h-lh35" placeholder="" data-toggle="dropdown" value="4x6">
+                                <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                    <li><a href="javascript:void(0);">4x6</a></li>
+                                    <li><a href="javascript:void(0);">8x11.5</a></li>
+                                </ul>
+                                <span class="caret caret-absolute r25 "></span>
+                                <!-- 展开添加green 变绿色 -->
+                            </div>
+                            <label class="col-xs-1 f16 mt5 plr0">
+                            <input type="checkbox" class="mr5">不打印？</label>
+                            <label class="col-xs-4 f14 mt5">这个尺寸适合热敏打印机</label>
+                        </div>
+                        <div class="form-group form-md-line-input  row">
+                            <label class="col-xs-1 control-label f16 t-l star-red">发货时间</label>
+                            <div class="col-xs-2 p-r">
+                                <div class="input-group date formDate" data-date="" data-date-format="dd MM yyyy" data-link-field="startDate" data-link-format="yyyy-mm-dd">
+                                    <input id="startDate" class="form-control h-lh35" size="16" type="text" value="" placeholder="选择预报开始时间">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fuwucp">
+                	<div class="tips-title">
+                        <h3 class="f20 bold">服务产品<i class="glyphicon glyphicon-exclamation-sign color-green"></i></h3>
+                    </div>
+                    <table class="table table-select service-chose">
+				        <thead>
+				          <tr>
+				            <th>&nbsp;</th>
+				            <th>产品属性</th>
+				            <th>服务名称</th>
+				            <th>申报要求</th>
+				            <th>运转时效</th>
+				            <th>预估运费 </th>
+				            <th>预估税费 </th>
+				            <th>产品描述</th>
+				            
+				          </tr>
+				        </thead>
+				        <tbody>
+				          <tr class="active">
+				            <td><em class="select-ico"></em></td>
+				            <td class="text-center guanfang">
+				            	<span>自营产品</span>
+				            	<span class="btn btn-default btn-xs btn-warning d-b w100"><i class="fa fa-thumbs-o-up mr5"></i>官方推荐</span>
+				            	
+				            	
+				            </td>
+				            <td>美国极速十日达专线</td>
+				            <td>这里是申报要求</td>
+				            <td>8-10个工作日</td>
+				            <td>￥68.00/0.5kg</td>
+				            <td>￥23.00/0.5kg</td>
+				            <td><a class="color-blue" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="线路详线路详情线路详情线路详情线路线路详线路详情线路详情线路详情线路详情情详情情">查看详情</a></td>
+				            
+				          </tr>
+				          <tr class="">
+				            <td><em class="select-ico"></em></td>
+				            <td>万国邮政</td>
+				            <td>美国普货二十日达专线</td>
+				            <td>这里是申报要求</td>
+				            <td>8-10个工作日</td>
+				            <td>￥68.00/0.5kg</td>
+				            <td>￥23.00/0.5kg</td>
+				            <td><a class="color-blue" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="线路详线路详情线路详情线路详情线路线路详线路详情线路详情线路详情线路详情情详情情">查看详情</a></td>
+				            
+				          </tr>
+				        </tbody>
+				      </table>
+                	
+                </div>
+                
+                <div class="qita-xinxi">
+                    <div class="tips-title">
+                        <h3 class="f20 bold">其他信息<i class="glyphicon glyphicon-exclamation-sign color-green"></i></h3>
+                    </div>
+                    <div class="row clearfix ">
+                        <div class="col-xs-6 pr25">
+                            <div class="form-group form-md-line-input p-r row">
+                                <label class="col-xs-3 control-label f16 t-l">发票号码</label>
+                                <div class="col-xs-9 p-r">
+                                    <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                    <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                        <li> <a href="#">1111</a> </li>
+                                        <li> <a href="#">2222</a> </li>
+                                        <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group form-md-line-input p-r row">
+                                <label class="col-xs-3 control-label f16 t-l">客户备注</label>
+                                <div class="col-xs-9 p-r">
+                                    <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                    <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                        <li> <a href="#">1111</a> </li>
+                                        <li> <a href="#">2222</a> </li>
+                                        <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group form-md-line-input p-r row">
+                                <label class="col-xs-3 control-label f16 t-l">发票备注</label>
+                                <div class="col-xs-9 p-r">
+                                    <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                    <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                        <li> <a href="#">1111</a> </li>
+                                        <li> <a href="#">2222</a> </li>
+                                        <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 pl25">
+                            <div class="form-group form-md-line-input p-r row">
+                                <label class="col-xs-3 control-label f16 t-l">Email发送到：</label>
+                                <div class="col-xs-9 p-r">
+                                    <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                    <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                        <li> <a href="#">1111</a> </li>
+                                        <li> <a href="#">2222</a> </li>
+                                        <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group form-md-line-input p-r row">
+                                <label class="col-xs-3 control-label f16 t-l">运单备注：</label>
+                                <div class="col-xs-9 p-r">
+                                    <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                    <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                        <li> <a href="#">1111</a> </li>
+                                        <li> <a href="#">2222</a> </li>
+                                        <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group form-md-line-input p-r row">
+                                <label class="col-xs-3 control-label f16 t-l">Order ID：</label>
+                                <div class="col-xs-9 p-r">
+                                    <input type="text" class="form-control b0 bm-e7 b0-bm-focus f16 h-lh35" placeholder="" data-toggle="dropdown">
+                                    <ul class="dropdown-menu mt0 pull-right wp100 wp100-30 l-15" role="menu">
+                                        <li> <a href="#">1111</a> </li>
+                                        <li> <a href="#">2222</a> </li>
+                                        <li> <a href="#" class="c-edit">创建并编辑</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fufei-xinxi">
+                    <div class="tips-title">
+                        <h3 class="f20 bold">付费明细<i class="glyphicon glyphicon-exclamation-sign color-green"></i></h3>
+                    </div>
+                    <ul class="box-service-rule clearfix selcetTab">
+                        <li class="active"><em class="select-ico"></em>快速出库(<em class="color-yellow">帐号余额自动支付</em>)</li>
+                        <li><em class="select-ico"></em>取消帐号余额自动支付</li>
+                    </ul>
+                </div>
+                <div class="bg-gray clearfix box-added-service">
+                    <div class="dropdown pull-right"> <a href="#" id="myDrop2" class="dropdown-toggle color-green" data-toggle="dropdown" aria-controls="myDrop2-contents"><i class="glyphicon glyphicon-exclamation-sign"></i>增值服务费:<em class="color-yellow">￥38</em><span class="caret"></span> </a>
+                      <ul class="dropdown-menu" aria-labelledby="myDrop2" id="myDrop2-contents">
+                        <li>合箱服务：<em class="color-yellow">￥38</em></li>
+                        <li>合箱服务：<em class="color-yellow">￥38</em></li>
+                        <li>合计:<em class="color-yellow">￥69</em></li>
+                      </ul>
+                    </div>
+                    <div class="pull-right f16 mr20"><a href="#" class="dropdown-toggle color-green">优惠券使用:<em class="color-yellow">38 CNY</em> </a></div>
+                    <div class="pull-right f16 mr20"><a href="#" class="dropdown-toggle color-green">代收货款:<em class="color-yellow">38 CNY</em> </a></div>
+                    <div class="pull-right f16 mr20"><a href="#" class="dropdown-toggle color-green">邮费:<em class="color-yellow">38 CNY</em> </a></div>
+                </div>
+                <div class="box-soon-btn text-right mt0 b0 pm10">
+                    <div class="f16 mb20">
+                        <input type="checkbox">
+                        <span class="color-green ml10">我已阅读并同意<a href="#" class="color-blue" data-toggle="modal" data-target="#zeren">《关于用户错误填写商品信息追责条款》</a></span></div>
+                    <button type="button" class="btn btn-green" data-toggle="modal" data-target="#reminder">立即支付</button>                    
+                    <button type="button" class="btn btn-green" data-toggle="modal" data-target="#reminder">创建并新增</button>
+                    <button type="reset" class="btn btn-default">取消</button>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-12 text-right">
+                        <p class="form-control-static checkbox plr20 f16">
+                            <label class="mr20">
+                                <input type="checkbox" class="mr5"> 打印发件地址
+                            </label>
+                            <label class="mr20">
+                                <input type="checkbox" class="mr5"> 打印内件品名
+                            </label>
+                            <label class="mr20">
+                                <input type="checkbox" class="mr5"> 货到付款
+                            </label>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- content end -->
+    <!-- footer start -->
+    <!-- footer start -->
+    <div class="container footer text-center">
+        <p> <a href="#">吉祥邮首页</a> <span>|</span> <a href="#">新手指南</a> <span>|</span> <a href="#">常见问题</a> <span>|</span> <a href="#">招商加盟</a> <span>|</span> <a href="#">联系我们</a> <span>|</span> <a href="#">人才招聘</a> </p>
+        <p>Copyright Bojun INC (网站备案号：沪ICP备09002089号-9) jixiangyou.com 保留一切权利。</p>
+    </div>
+    <!-- footer end -->
+    <!-- footer end -->
+    <!-- modal -->
+    <div class="list none">
+        <div class="tips">
+            <p><em class="color-red">请注意:</em>根据中国海关的要求，进口货物需要向海关提供真实姓名和身份证信息</p>
+        </div>
+        <div class="address-add" id="crop-avatar" data-ratio="auto">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-xs-2 control-label">姓名：</label>
+                    <div class="col-xs-9 star-red">
+                        <input class="form-control" type="text" name="" placeholder="请填写真实收货人姓名">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2 control-label">手机：</label>
+                    <div class="col-xs-9 star-red">
+                        <input class="form-control" type="text" name="" placeholder="请填写手机号码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2 control-label">所在地区：</label>
+                    <div class="col-xs-2 star-red">
+                        <select name="input_province" id="inputProvince" class="form-control">
+                        </select>
+                    </div>
+                    <div class="col-xs-2">
+                        <select name="input_city" id="inputCity" class="form-control">
+                        </select>
+                    </div>
+                    <div class="col-xs-3">
+                        <select name="input_area" id="inputArea" class="form-control">
+                        </select>
+                    </div>
+                    <div class="col-xs-3">
+                        <select name="input_area" id="inputArea" class="form-control">
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2 control-label">详细地址：</label>
+                    <div class="col-xs-9 star-red">
+                        <textarea class="form-control" rows="3" placeholder="填写详细地址，无需重复填写省市区"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2 control-label">邮政编码：</label>
+                    <div class="col-xs-9 star-red">
+                        <input class="form-control" type="text" name="" placeholder="请填写邮政编码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2 control-label">身份证号：</label>
+                    <div class="col-xs-9 star-red">
+                        <input class="form-control" type="text" name="" placeholder="请填写收件人身份证号码(由于国家海关规定,海淘需实名认证) ">
+                    </div>
+                </div>
+                <div class="form-group upload-id">
+                    <label class="col-xs-2 control-label">证件照片：</label>
+                    <div class="col-xs-3 star-red">
+                        <div class="upload-id-img avatar-view"> <img src="images/img_upload.png"> </div>
+                        <p>上传身份证正面照片</p>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="upload-id-img avatar-view"> <img src="images/img_upload2.png"> </div>
+                        <p>上传身份证反面照片</p>
+                    </div>
+                    <div class="col-xs-4"> </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-9 col-xs-offset-2 checkbox">
+                        <label>
+                            <input type="checkbox" name=""> 设为默认收货地址 </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-9 col-xs-offset-2">
+                        <button type="submit" data-toggle="modal" data-target=".modal-submit" data-type="submit" data-title="提示" class="btn btn-green">保存收货地址</button>
+                    </div>
+                </div>
+            </form>
+            <!-- Cropping modal -->
+            <div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form class="avatar-form" action="crop.php" enctype="multipart/form-data" method="post">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title" id="avatar-modal-label">上传身份证</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="avatar-body">
+                                    <!-- Upload image and data -->
+                                    <div class="avatar-upload  upload">
+                                        <input type="hidden" class="avatar-src" name="avatar_src">
+                                        <input type="hidden" class="avatar-data" name="avatar_data">
+                                        <a class="btn btn-yellow upload-btn" href="javascript:void(0);"><i class="glyphicon glyphicon-arrow-up"></i>上传图像
+                  <input type="file" accept="image/*" class="avatar-input upload-file" id="avatarInput" name="avatar_file">
+                  </a> </div>
+                                    <!-- Crop and preview -->
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="avatar-wrapper"></div>
+                                        </div>
+                                    </div>
+                                    <div class="avatar-btns row">
+                                        <div class="col-xs-9">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-primary" data-method="zoom" data-option="0.1" title="放大"><i class="glyphicon glyphicon-zoom-in"></i></button>
+                                                <button type="button" class="btn btn-primary" data-method="zoom" data-option="-0.1" title="缩小"><i class="glyphicon glyphicon-zoom-out"></i></button>
+                                                <button type="button" class="btn btn-primary" data-method="rotate" data-option="90" title="Rotate 90 degrees"><i class="glyphicon glyphicon-zoom-in"></i></button>
+                                                <button type="button" class="btn btn-primary" data-method="rotate" data-option="-90" title="Rotate -90 degrees"><i class="glyphicon glyphicon-zoom-out"></i></button>
+                                                <button type="button" class="btn btn-primary" data-method="reset" title="重置"><i class="glyphicon glyphicon-refresh"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <button type="submit" class="btn btn-primary avatar-save">确定上传</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal -->
+        </div>
+    </div>
+    <div class="modal fade" id="address" aria-hidden="true" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content"> </div>
+        </div>
+    </div>
+    <!-- 上传购物小票弹窗 -->
+    <div class="modal fade" id="uploadShopNote" aria-hidden="true" role="dialog" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="avatar-modal-label">上传购物凭证</h4>
+                </div>
+                <div class="modal-body"> <img src="images/shop-img.jpg">
+                    <div class="shop-note">
+                        <div class="upload clearfix text-center"> <a class="btn btn-yellow upload-btn" href="javascript:void(0);">点击上传购物图片
+            <input type="file" class="avatar-input upload-file" id="uploadNote" >
+            </a> <a href="javascript:void(0);" class="close btn btn-default" data-dismiss="modal">关闭</a> </div>
+                        <ul class="preview-list clearfix">
+                            <li><img src="images/shop-img.jpg"><span class="preview-close">&times;</span></li>
+                            <li><img src="images/shop-img.jpg"><span class="preview-close">&times;</span></li>
+                            <li><img src="images/shop-img.jpg"><span class="preview-close">&times;</span></li>
+                            <li><img src="images/shop-img.jpg"><span class="preview-close">&times;</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 申报类别弹窗弹窗 -->
+    <div class="modal fade" id="selectSort" aria-hidden="true" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="avatar-modal-label">选择申报类别</h4>
+                </div>
+                <div class="modal-body select-sort container-fluid">
+                    <div class="input-group search-input col-xs-8 col-xs-offset-2">
+                        <input class="form-control" type="text" placeholder="输入你要搜索的类别">
+                        <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                    </div>
+                    <div class="row many-sort">
+                        <div class="col-xs-2"><span>您的常用类别</span></div>
+                        <ul class="col-xs-10">
+                            <li>纸尿裤</li>
+                            <li>纸尿裤</li>
+                            <li>纸尿裤</li>
+                            <li>纸尿裤</li>
+                            <li>纸尿裤</li>
+                            <li>纸尿裤</li>
+                        </ul>
+                    </div>
+                    <div class="sort-list clearfix">
+                        <div class="sort-title"> <span class="glyphicon glyphicon-chevron-up"></span>
+                            <ul>
+                                <li class="active"><a href="#">奶粉尿裤</a></li>
+                                <li><a href="#">母婴用品</a></li>
+                                <li><a href="#">美妆个护</a></li>
+                                <li><a href="#">营养保健</a></li>
+                                <li><a href="#">食品饮料</a></li>
+                                <li><a href="#">数码电器</a></li>
+                                <li><a href="#">美妆个护</a></li>
+                                <li><a href="#">营养保健</a></li>
+                                <li><a href="#">奶粉尿裤</a></li>
+                                <li><a href="#">母婴用品</a></li>
+                                <li><a href="#">美妆个护</a></li>
+                                <li><a href="#">营养保健</a></li>
+                                <li><a href="#">奶粉尿裤</a></li>
+                                <li><a href="#">母婴用品</a></li>
+                                <li><a href="#">美妆个护</a></li>
+                                <li><a href="#">营养保健</a></li>
+                            </ul>
+                            <span class="glyphicon glyphicon-chevron-down"></span> </div>
+                        <div class="sort-content">
+                            <div class="sort-content-list" style="display: block;">
+                                <ul class="clearfix">
+                                    <li>母婴用品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                </ul>
+                            </div>
+                            <div class="sort-content-list">
+                                <ul class="clearfix">
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                </ul>
+                            </div>
+                            <div class="sort-content-list">
+                                <ul class="clearfix">
+                                    <li>美妆个护</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                </ul>
+                            </div>
+                            <div class="sort-content-list">
+                                <ul class="clearfix">
+                                    <li>营养保健</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                </ul>
+                            </div>
+                            <div class="sort-content-list">
+                                <ul class="clearfix">
+                                    <li>食品饮料</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                </ul>
+                            </div>
+                            <div class="sort-content-list">
+                                <ul class="clearfix">
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                </ul>
+                            </div>
+                            <div class="sort-content-list">
+                                <ul class="clearfix">
+                                    <li>数码电器</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                </ul>
+                            </div>
+                            <div class="sort-content-list">
+                                <ul class="clearfix">
+                                    <li>美妆个护</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                </ul>
+                            </div>
+                            <div class="sort-content-list">
+                                <ul class="clearfix">
+                                    <li>营养保健</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                </ul>
+                            </div>
+                            <div class="sort-content-list">
+                                <ul class="clearfix">
+                                    <li>奶粉尿裤</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                </ul>
+                            </div>
+                            <div class="sort-content-list">
+                                <ul class="clearfix">
+                                    <li>母婴用品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                </ul>
+                            </div>
+                            <div class="sort-content-list">
+                                <ul class="clearfix">
+                                    <li>美妆个护</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                </ul>
+                            </div>
+                            <div class="sort-content-list">
+                                <ul class="clearfix">
+                                    <li>营养保健</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                    <li>罐头食品</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 关于用户错误填写商品信息追责条款 -->
+    <div class="modal fade" id="zeren" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title text-center color-green" id="myModalLabel"> 关于用户错误填写商品信息追责条款 </h4>
+                </div>
+                <div class="output-body">
+                    <ul class="tips-update plr10">
+                        <li>1、 用户确认已认真阅读并理解本网站的服务条款， 并承诺实际交付托运的货物名称与网上选填货物类别一致。 由于用户提供错误、不完整、不实信息等造成不能正常使用服务或遭受任何其他损失，上海虹先供应链管理有限公司（下文简称"吉祥邮"）及本网站无需承担任何责任。 如因此导致的货物被扣押、禁运、退回等，其后果将完全由用户自己承担。如因此给"吉祥邮"或本网站造成损失， 用户同意承担由此造成的损害赔偿责任。</li>
+                        <li>2、 用户保证在交运货物前已了解出口国、 中途国及目的地国的法律规定， 保证不交寄或不在交寄的货物中夹带下列物品：
+                            <br> 一）出口国、中途国及目的地国法律规定禁止流通或者寄递的物品；
+                            <br> 二）反动报刊书籍、宣传品或者淫秽物品；
+                            <br> 三）爆炸性、易燃性、腐蚀性、放射性、毒性等危险物品；
+                            <br> 四）妨害公共卫生的物品；
+                            <br> 五）容易腐烂的物品；
+                            <br> 六）其它不应交寄的物品。
+                        </li>
+                        <li>3、 因用户违反上述规定而招致货物损失或给第三方造成损害， 用户同意承担由此造成的损害赔偿责任；情节严重的， "吉祥邮"及本网站将立即取消该用户的会员资格并注销其用户账号； 如因用户违反上述规定触犯有关国家法律遭受调查， "吉祥邮"及本网站将主动提供用户信息配合调查机构的调查活动， 相关法律后果由用户自行承担。</li>
+                        <li>4、 本协议最终解释权归"吉祥邮"所有。</li>
+                    </ul>
+                </div>
+                <div class="modal-footer text-center">
+                    <div class="checkbox"> &nbsp;&nbsp;
+                        <button type="button" class="btn btn-green" data-dismiss="modal">朕知道了</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade reminder" id="reminder" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">温馨提示 <i  class="color-orange ml10">(*这些将影响您的包裹清关！)</i></h4>
+                </div>
+                <div class="modal-body f12 ptb20 clearfix">
+                    <ul class="circle-list clearfix">
+                        <li class="col-xs-4"> <span class="bg-orange d-b f20">金额<br>
+            限制</span>
+                            <p class="mt10">单个包裹限制<i class="c-f60">≤1000元</i>
+                                <br> (单件不可分割物品除外)
+                            </p>
+                        </li>
+                        <li class="col-xs-4"> <span class="bg-orange d-b f20">如实<br>
+            申报</span>
+                            <p class="mt10">如实申报货品数量及价值信息
+                                <br> (同一包裹同类别数量≤20)
+                            </p>
+                        </li>
+                        <li class="col-xs-4"> <span class="bg-orange d-b f20">详细<br>
+            预报</span>
+                            <p class="mt10">详细填写：
+                                <br>
+                                <i class="c-f60">品牌+名称+配置</i></p>
+                        </li>
+                    </ul>
+                    <div class="tips tips-orange mt10">
+                        <dl>
+                            <dt><i class="glyphicon glyphicon-volume-up"></i></dt>
+                            <dd>您的货物不在50元免征之内！建议您选择IPS,所缴税款可能更低哦！</dd>
+                            <dd><a href="#">跨境综合税率及个人综合税率参考>></a></dd>
+                        </dl>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-green">继续</button>
+                        <button type="button" class="btn btn-radius" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/cropper.min.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/main-crop.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript">
+$(".formDate").datetimepicker({
+    language: 'zh-CN',
+    weekStart: 1,
+    todayBtn: 1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    minView: 2,
+    maxView: 4,
+    forceParse: 0
+});
+</script>
+<script type="text/javascript">
+$(function() {
+    // select
+    var html = "<option value=''>== 请选择 ==</option>";
+    $("#inputCity").append(html);
+    $("#inputArea").append(html);
+    $.each(pdata, function(idx, item) {
+        if (parseInt(item.level) == 0) {
+            html += "<option value='" + item.names + "' exid='" + item.code + "'>" + item.names + "</option>";
+        }
+    });
+    $("#inputProvince").append(html);
+
+    $("#inputProvince").change(function() {
+        if ($(this).val() == "") return;
+        $("#inputCity option").remove();
+        $("#inputArea option").remove();
+        var code = $(this).find("option:selected").attr("exid");
+        code = code.substring(0, 2);
+        var html = "<option value=''>== 请选择 ==</option>";
+        $("#inputArea").append(html);
+        $.each(pdata, function(idx, item) {
+            if (parseInt(item.level) == 1 && code == item.code.substring(0, 2)) {
+                html += "<option value='" + item.names + "' exid='" + item.code + "'>" + item.names + "</option>";
+            }
+        });
+        $("#inputCity").append(html);
+    });
+
+    $("#inputCity").change(function() {
+        if ($(this).val() == "") return;
+        $("#inputArea option").remove();
+        var code = $(this).find("option:selected").attr("exid");
+        code = code.substring(0, 4);
+        var html = "<option value=''>== 请选择 ==</option>";
+        $.each(pdata, function(idx, item) {
+            if (parseInt(item.level) == 2 && code == item.code.substring(0, 4)) {
+                html += "<option value='" + item.names + "' exid='" + item.code + "'>" + item.names + "</option>";
+            }
+        });
+        $("#inputArea").append(html);
+    });
+    //初始化
+    $("#inputProvince").val("北京市").change();
+    $("#inputCity").val("市辖区").change();
+    $("#inputArea").val("东城区");
+    // 上传小票
+    $("body").delegate(".preview-list .preview-close", "click", function() {
+        $(this).parent().remove();
+    })
+    $("body").delegate("#uploadNote", "change", function() {
+        //这里是上传后后调吗？
+    })
+
+});
+$(function() { $("[data-toggle='tooltip']").tooltip(); });
+//select-tab
+$(".table-select,.selcetTab").delegate("tr,li", "click", function() {
+    $(this).addClass("active").siblings().removeClass("active");
+
+
+});
+
+
+$('#haiguan-all').click(function() {
+    var isChecked = $(this).find('input[type="checkbox"]').is(':checked');
+    isChecked ?  $('.baoguo-haiguan').show() : $('.baoguo-haiguan').hide();
+    isChecked ?  $('.baoguo-ziliao').addClass("bm-dot-e7-2") : $('.baoguo-ziliao').removeClass("bm-dot-e7-2");
+
+});
+</script>
+
+</html>
